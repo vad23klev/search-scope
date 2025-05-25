@@ -1,0 +1,6 @@
+{
+    "searchScopes": [
+        "src/",
+        "media/"
+    ]
+}

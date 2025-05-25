@@ -1,0 +1,48 @@
+{
+  "name": "search-scope",
+  "publisher": "vad23klev",
+  "displayName": "Search Scope",
+  "description": "Search in files use scopes",
+  "icon": "./icons/icon.png",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "url": "https://github.com/vad23klev/search-scope"
+  },
+  "activationEvents": [
+    "workspaceContains:**/.search-scope-config.json"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "search-scope.toggleSearch",
+        "category": "Search Scope",
+        "title": "Toggle Search",
+        "icon": "$(coffee)"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint",
+    "pretest": "npm run lint",
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./"
+  },
+  "devDependencies": {
+    "@types/relaxed-json": "^1.0.4",
+    "@types/vscode": "^1.73.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.16.0"
+  },
+  "dependencies": {
+    "relaxed-json": "^1.0.0"
+  }
+}
